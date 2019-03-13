@@ -1,0 +1,24 @@
+}
+		void HScrollBar1Scroll(object sender, ScrollEventArgs e)
+		{
+	
+		}
+		void PirosTxtTextChanged(object sender, EventArgs e)
+		{
+			if (pirosTxt.Text == "-") pirosTxt.Text = "0";
+			if (int.Parse(pirosTxt.Text) > 255) pirosTxt.Text ="255";
+			pirosHSb.Value = int.Parse(pirosTxt.Text);
+			szinPnl.BackColor = Color.FromArgb(pirosHSb.Value,
+			                                   
+			                                   zoldHSb.Value,
+			                                   kekHSb.Value);
+		}
+		void ZoldHSbScroll(object sender, ScrollEventArgs e)
+		{
+	szinPnl.BackColor = Color.FromArgb(zoldHSb.Value,
+			                                  pirosHSb.Value,
+			                                   kekHSb.Value);
+			zoldTxt.Text = pirosHSb.Value.ToString();
+		}
+	}
+}
