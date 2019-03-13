@@ -1,0 +1,42 @@
+public partial class MainForm : Form
+	{
+		public string emailinput;
+		bool eredmeny;
+		char kukac = '@';
+	
+	public bool emailer (string s, char k)
+	{
+		
+		bool check=false;
+		
+		if (emailinput.Contains(k.ToString())==true)	check = true;
+		
+		return check;
+		
+	}
+		public MainForm()
+		{
+			
+			InitializeComponent();
+		}
+		void EllClick(object sender, EventArgs e)
+		{
+			emailinput=textbox_ell.Text;
+			eredmeny=emailer(emailinput,kukac);
+			if (eredmeny==true) {
+				teredmeny.Text="ok";
+				
+				}
+			if (eredmeny==false) {
+					teredmeny.Text= "Not okey";
+			}
+		}
+		void KilépésClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+		
+		
+		
+	}
+}
