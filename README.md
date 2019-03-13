@@ -1,0 +1,2 @@
+# szinvaltas
+oraimunka
