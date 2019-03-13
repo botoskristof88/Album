@@ -1,0 +1,23 @@
+Gif start/stop  
+	
+		}
+		void KilepesClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+		void StartClick(object sender, EventArgs e)
+		{
+	if (start.Text == "Start")
+			{
+				pictureBox1.Enabled = true;
+				start.Text = "Stop";
+			}
+			else
+			{
+				pictureBox1.Enabled = false;
+				start.Text = "Start";
+			}
+				
+		}
+	}
+}
