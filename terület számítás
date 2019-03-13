@@ -1,0 +1,17 @@
+}
+		void SzamitasClick(object sender, EventArgs e)
+		{
+			double a = double.Parse(aoldaltTxtB.Text);
+			double b = double.Parse(boldalTxtB.Text);
+			double t, k;
+			t = a * b;
+			k = 2 * (a+b);
+			teruletLbl.Text = t.ToString();
+			MessageBox.Show(k.ToString(), "kerület");
+		}
+		void KilepesClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+	}
+}
