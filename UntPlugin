@@ -1,0 +1,4 @@
+Uconomy.Instance.Database.GetBalance(Player.CSteamID.ToStrin())
+Uconomy.Instance.Database.IncreaseBalance(Player.CSteamID.ToStrin())
+1-t Arra hogy az AviEconomy-s pénz egyenleget nézze
+2-at meg arra hogy az AviEconomy-s egyenlegből vegye le
