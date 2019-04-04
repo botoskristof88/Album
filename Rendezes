@@ -1,0 +1,73 @@
+namespace Rend
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		
+		public MainForm()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		void Button3Click(object sender, EventArgs e)
+		{
+	int szam = int.Parse(eredmenyLbl.Text);
+			if (szam % 1 == 0)
+				eredmenyLbl.Text = "Páros";
+			else
+				eredmenyLbl.Text = "Páratlan";
+			BackColor = Color.Red;
+		}
+		void KilepesClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+		void RendezClick(object sender, EventArgs e)
+		{
+			int a = int.Parse(szam1.Text);
+			int b = int.Parse(szam2.Text);
+			int c = int.Parse(szam3.Text);
+			int d = int.Parse(szam4.Text);
+			int f = int.Parse(szam5.Text);
+			int g = int.Parse(szam6.Text);
+			double o = (a + b + c + d + f + g);
+			osszegTextB.Text = o.ToString();
+			eredmenyLbl.Text = o.ToString();
+		}
+		void OsszeadasClick(object sender, EventArgs e)
+		{
+			double a =double.Parse(osszegTextB.Text);
+			double o;
+			o = a;
+			osszegTextB.Text = o.ToString();
+			MessageBox.Show(o.ToString(), "Összeadva");
+		}
+		void ParatlanClick(object sender, EventArgs e)
+		{
+	int szam2 = int.Parse(eredmenyLbl.Text);
+			if (szam2 % 1 == 0)
+				eredmenyLbl.Text = "Páratlan";
+			BackColor = Color.Blue;
+		}
+		void ResetClick(object sender, EventArgs e)
+		{
+	    szam1.Clear();
+        szam2.Clear();
+        szam3.Clear();
+        szam4.Clear();
+        szam5.Clear();
+        szam6.Clear();
+        osszegTextB.Clear();
+        eredmenyLbl.Clear();
+        BackColor = Color.LightBlue;
+		}
+	}
+}
