@@ -1,0 +1,96 @@
+public partial class MainForm : Form
+	{
+		public MainForm()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		void BekerClick(object sender, EventArgs e)
+		{
+			if (textBox1.Text =="1")
+			{
+				textBox2.Text ="1";
+				
+			}
+			if (textBox1.Text =="2")
+			{
+				textBox2.Text="22";
+			}
+			if (textBox1.Text =="3")
+			{
+				textBox2.Text="333";
+			}
+			if (textBox1.Text =="4")
+			{
+				textBox2.Text="4444";
+			}
+			if (textBox1.Text =="5")
+			{
+				textBox2.Text="55555";
+			}
+			if (textBox1.Text =="6")
+			{
+				textBox2.Text="666666";
+			}
+			if (textBox1.Text =="7")
+			{
+				textBox2.Text="7777777";
+			}
+			if (textBox1.Text =="8")
+			{
+				textBox2.Text="88888888";
+			}
+			if (textBox1.Text =="9")
+			{
+				textBox2.Text="999999999";
+			}
+			if (textBox1.Text =="10")
+			{
+				textBox2.Text="10101010101010101010";
+			}
+			if (textBox1.Text=="11")
+			{
+				textBox2.Text="";
+				MessageBox.Show("Kevesebbet írjál ezt már nem birom kiszámolni!");
+			}
+			{
+				if (int.Parse(textBox1.Text)>10);
+			}
+			if (textBox1.Text=="200")
+			{
+			    	textBox2.Text="";
+			    	MessageBox.Show("Kevesebbet írjál ezt már nem birom kiszámolni!");
+			}
+			if(textBox1.Text=="13")
+			{
+				textBox2.Text="500";
+				MessageBox.Show("Kevesebbet írjál ezt már nem birom kiszámolni!");
+			}
+			if(textBox1.Text=="14")
+			{
+				textBox2.Text="";
+				MessageBox.Show("Kevesebbet írjál ezt már nem birom kiszámolni!");
+			}
+			if (textBox1.Text=="15")
+			{
+				textBox2.Text="";
+				MessageBox.Show("Kevesebbet írjál ezt már nem birom kiszámolni!");
+			}
+		}
+		void Button1Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+		void Button2Click(object sender, EventArgs e)
+		{
+	    textBox1.Clear();
+        textBox2.Clear();
+		}
+	}
+}
