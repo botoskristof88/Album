@@ -1,0 +1,4 @@
+Random rnd=new Random();
+			int x=rnd.Next(0,450);
+			int y=rnd.Next(0,450);
+			hoppBtn.Location=new Point(x,y);
