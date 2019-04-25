@@ -1,0 +1,66 @@
+public partial class MainForm : Form
+	{
+		public MainForm()
+		{
+			
+			InitializeComponent();
+			
+			
+		}
+		void ShowClick(object sender, EventArgs e)
+		{
+			
+			DialogResult valasz=MessageBox.Show("Válaszd ki a színt majd","szinező",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+			
+			if (valasz == DialogResult.Yes) 
+			{
+				MessageBox.Show("Igen szinezek");
+			}
+			else
+			{
+				MessageBox.Show("Nem szinezek");
+			}
+
+		}
+		void Button1Click(object sender, EventArgs e)
+		{
+			
+			
+			ColorDialog cd=new ColorDialog();
+			DialogResult dr=cd.ShowDialog();
+			
+			if (dr==DialogResult.OK) {
+				textbox.BackColor=cd.Color;
+				textbox.Text=cd.Color.ToString();
+			}
+			
+			
+			
+		}
+		void ExitClick(object sender, EventArgs e)
+		{
+			DialogResult kilépés=MessageBox.Show("Biztosan kilépsz?", "kilépés",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+			if (kilépés==DialogResult.Yes) {
+				Application.Exit();
+			}
+			
+		}
+		void TextBox1TextChanged(object sender, EventArgs e)
+		{
+					
+			
+		}
+		void Button2Click(object sender, EventArgs e)
+		{
+			FontDialog ablak=new FontDialog();
+			ablak.ShowColor=true;
+			ablak.ShowApply=true;
+			ablak.ShowEffects=true;
+			ablak.ShowHelp=true;
+			ablak.MinSize=12;
+			ablak.MaxSize=23;
+			if (ablak.ShowDialog()!=DialogResult.Cancel) {
+				textbox.ForeColor=ablak.Color;
+				textbox.Font=ablak.Font;
+			}
+		}
