@@ -1,0 +1,36 @@
+//MailMessage message = new MailMessage("spamminger12@gmail.com" , "fricz.personal@gmail.com","DO u want big cock","how many big cock?");
+			
+			SmtpClient client = new SmtpClient();
+			
+			client.Host = "smtp.gmail.com";
+			client.Port =587;
+			client.EnableSsl = true;
+			client.DeliveryMethod = SmtpDeliveryMethod.Network;
+			client.UseDefaultCredentials = false;
+			
+			client.Credentials = new System.Net.NetworkCredential("spamminger123@gmail.com","QAWqaw123");
+			
+			string b =  "Ncore meghívó";
+			string a="!";
+			
+			for (int i = 0; i < 100; i++) {
+				Random rnd=new Random();
+				Thread.Sleep(rnd.Next(1000,2000));
+				client.Send(new MailMessage("spamminger12@gmail.com" , "renato.hegedus12@freemail.hu",b+=a,"Join us for free"));
+				Console.WriteLine("{0}. üzenet elküldve",i+1);
+			}
+			
+			
+			Console.ReadKey();
+		
+						                                      
+		                                      
+			
+			
+			
+			
+			
+			Console.ReadKey(true);
+		}
+	}
+}
