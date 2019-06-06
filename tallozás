@@ -1,0 +1,12 @@
+void TallozClick(object sender, EventArgs e)
+		{
+			OpenFileDialog open= new OpenFileDialog();
+			open.Filter="Szövegfájlok (txt)|*.txt|Minden Fájl|*,*";
+				open.ShowDialog();
+			String fname=open.FileName;
+			label1.Text =fname;
+			String filepath=open.FileName;
+			
+			StreamReader reader=new StreamReader(filepath);
+			richTextBox1.Text=reader.ReadToEnd();
+			reader.Close();
