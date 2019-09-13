@@ -4,3 +4,7 @@ Switch(config)#hostname S1
 S1(config)# enable password jelszó ---> titkosítatlan
 S1(config)# enable secret class ---> titkosított
 S1(config)#service password-encryption ---> minden jelszó titkosítva jelenik meg a config file-ban = gagyi
+S1(config)#line console 0
+S1(config-line)#password compass ---> console vonali jelszó
+               #login ---> mindig kérjen jelszót!
+S1#copy run start ---> biztonsági mentés               
