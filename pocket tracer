@@ -1,0 +1,58 @@
+Switch>
+Switch>
+Switch>
+Switch>
+Switch>
+Switch>enable
+Switch#hos
+Switch#cof
+Switch#cong
+Switch#conf
+Switch#configure ter
+Switch#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname buzivagyok
+buzivagyok(config)#hos
+buzivagyok(config)#hostname S2
+S2(config)#enable pas
+S2(config)#enable password 
+% Incomplete command.
+S2(config)#enable
+S2(config)#enable pas
+S2(config)#enable password c1sc0
+S2(config)#diiiiir
+            ^
+% Invalid input detected at '^' marker.
+	
+S2(config)#line
+S2(config)#line co
+S2(config)#line console 0
+S2(config-line)#pas
+S2(config-line)#password letmein
+S2(config-line)#ex
+S2(config-line)#ex
+% Ambiguous command: "ex"
+S2(config-line)#exit
+S2(config)#enable secc
+S2(config)#enable sec
+S2(config)#enable secret 
+% Incomplete command.
+S2(config)#enab
+S2(config)#enable sec
+S2(config)#enable secret s3cr3t01
+S2(config)#ba
+S2(config)#banner m
+S2(config)#banner motd @Jogosulatlan belepes tilos!@
+S2(config)#exit
+S2#
+%SYS-5-CONFIG_I: Configured from console by console
+co
+S2#co
+S2#cop
+S2#copy run
+S2#copy running-config st
+S2#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+S2#
