@@ -8,3 +8,10 @@ S1(config)#line console 0
 S1(config-line)#password compass ---> console vonali jelszó
                #login ---> mindig kérjen jelszót!
 S1#copy run start ---> biztonsági mentés               
+S1(config)#interface vlan 1
+S1(config-if)#ip address ---> ipv4 -es cím
+#no shutdown ---> felkapcsolja az interface-t
+S1(config)# line vty 0 15 
+S1(config-line)# password vtyclass
+               #login
+               
