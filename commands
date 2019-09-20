@@ -64,3 +64,28 @@ Building configuration...
 [OK]
 SW2#
 SW2#
+------------------------------------------------------------------------------------------------
+SW2>ena
+Password: 
+Password: 
+SW2#ena
+SW2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW2(config)#int vlan 1
+SW2(config-if)#ip address 192.168.1.10 255.255.255.0
+SW2(config-if)#no sh
+
+SW2(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+no shutdown
+SW2(config-if)#exit
+SW2(config)#line vity 0 15
+                  ^
+% Invalid input detected at '^' marker.
+	
+SW2(config)#line vty 0 15
+SW2(config-line)#password cisco
+SW2(config-line)#login
+SW2(config-line)#
