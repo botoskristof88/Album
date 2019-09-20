@@ -31,3 +31,36 @@ S1(config-line)# password vtyclass
 3.modul
 -OSI és TCP/IP modell --->Osi modell segédlet
 - réteg modellek előnyei
+
+SW2(config)#line cons 0
+SW2(config-line)#password console123
+SW2(config-line)#login
+SW2(config-line)#exit
+SW2(config)#enable password netacad123
+SW2(config)#loginh
+               ^
+% Invalid input detected at '^' marker.
+	
+SW2(config)#login
+               ^
+% Invalid input detected at '^' marker.
+	
+SW2(config)#service 
+SW2(config)#service 
+SW2(config)#service password-
+SW2(config)#service password-encryption 
+SW2(config)#service pass
+SW2(config)#service password-encryption 
+SW2(config)#banner motd @Jogusulatlan belepes tilos@
+SW2(config)#exit
+SW2#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW2#run
+Translating "run"...domain server (255.255.255.255) % Name lookup aborted
+SW2#copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+SW2#
+SW2#
