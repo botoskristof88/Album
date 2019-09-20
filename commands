@@ -14,4 +14,20 @@ S1(config-if)#ip address ---> ipv4 -es cím
 S1(config)# line vty 0 15 
 S1(config-line)# password vtyclass
                #login
+               configure terminal belépés globális mode-ba
                
+               
+               
+1.modul
+-hálozatok csoportosítása
+-konvertált hálózat
+-logikai,fizikai topológia részei
+-hálózatok elemi
+
+2.modul
+-konfigurációs módok
+-alapszintű beállítási commandok(ENA SEC, Line ,int vlan 1,banner,hostname)
+
+3.modul
+-OSI és TCP/IP modell --->Osi modell segédlet
+- réteg modellek előnyei
