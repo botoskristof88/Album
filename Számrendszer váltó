@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace tizes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //bekérem az átváltandó számot
+            Console.Write("Add meg a számot");
+            int szam = Convert.ToInt32(Console.ReadLine());
+            //bekérem a számrendszert amibe át szeretném váltani
+            Console.Write("\nAdd meg args számrendszert:");
+            int szamrendszer = Convert.ToInt32(Console.ReadLine());
+            int megadott_szam = szam;
+            List<int> eredmeny = new List<int>();
+            Console.Clear();
+            Console.WriteLine("_______________________");
+            Console.WriteLine("\t{0}\t|\t{1}\t", megadott_szam, szamrendszer);
+            Console.WriteLine("_______________________");
+            int maradek;
+            {
+                maradek = szam % szamrendszer;
+                szam = szam / szamrendszer;
+                Console.WriteLine("\t{0}\t|\t{1}\t", szam, maradek);
+                eredmeny.Add(maradek);
+            }
+            Console.Write("az {0} szám {1}-s számrendszerbeli értéke: ", megadott_szam, szamrendszer);
+            for (int i = eredmeny.Count - 1; i >= 0; i--)
+            {
+                Console.Write("{0}", eredmeny[i]);
+            }
+            Console.ReadLine();
+        }
+        }
+    }
