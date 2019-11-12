@@ -1,0 +1,75 @@
+/*
+ * Created by SharpDevelop.
+ * User: diak
+ * Date: 2019. 01. 28.
+ * Time: 15:42
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace rendezgetos
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		int[] tomb = new int[15];
+		
+		public MainForm()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+				
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		void ExitClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+		void GeneralClick(object sender, EventArgs e)
+		{
+			label2.Text="";
+			label2.Visible= true;
+			Random vsz=new Random();
+			for (int i = 0; i < 15; i++)
+			{
+				tomb[i] = vsz.Next(100);
+				label2.Text=label2.Text + Convert.ToString(tomb[i])+" ";
+			}
+		}
+		void BuborekClick(object sender, EventArgs e)
+		{
+			label4.Text="";
+			label4.Visible=true;
+			int n;
+			for (int i = 0; i < 15; i++) 
+			{
+				for (int j = 0; j < 14; j++) 
+				{
+					if (tomb[j]>tomb[j+1])
+					{
+						n=tomb[j];
+						tomb[j]=tomb[j+1];
+						tomb[j+1]=n;
+					}	
+				}
+			}
+			for (int i = 0; i < 15; i++) 
+			{
+			
+			label4.Text=label4.Text+Convert.ToString(tomb[i])+" ";
+				
+			}
+			
+		}
+	}
+}
