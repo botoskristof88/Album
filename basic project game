@@ -1,0 +1,156 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace ágyús
+{
+    public partial class Form1 : Form
+    {
+        int iv = 3;
+        Random rnd = new Random();
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int feltav = 410;
+            int tav = 3;
+            int elet = 5;
+
+            if (pictureBox1.Left < feltav)
+            {
+
+                if (pictureBox1.Left > 250)
+                {
+                    tav = 2;
+                }
+                if (pictureBox1.Left > 400)
+                {
+                    tav = 1;
+                }
+                if (pictureBox1.Left > 450)
+                {
+                    tav = 0;
+                }
+                pictureBox1.Top = pictureBox1.Top - iv * tav;
+                pictureBox1.Left = pictureBox1.Left + 10;
+
+            }
+
+            else
+            {
+
+
+                if (pictureBox1.Left >= feltav && pictureBox1.Left < 800)
+                {
+                    tav = 0;
+                    if (pictureBox1.Left > 500)
+                    {
+                        tav = 1;
+                    }
+                    if (pictureBox1.Left > 550)
+                    {
+                        tav = 2;
+                    }
+                    if (pictureBox1.Left > 700)
+                    {
+                        tav = 3;
+                    }
+                    pictureBox1.Top = pictureBox1.Top + iv * tav;
+                    pictureBox1.Left = pictureBox1.Left + 10;
+                }
+            }
+            if (pictureBox1.Top + 10 > pictureBox2.Top && pictureBox1.Top + 10 < pictureBox2.Top + 45 && pictureBox1.Left + 40 == pictureBox2.Left)
+            {
+                elet--;
+                label1.Text = "Ellenség élete: " + elet;          
+            }
+
+            if (elet == 0)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                pictureBox3.Visible = true;
+                button7.Visible = true;
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Left > 70 && pictureBox1.Left < 130)
+            {
+                pictureBox1.Top = pictureBox1.Top + 5;
+                pictureBox1.Left = pictureBox1.Left - 5;
+                iv++;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Left > 70 && pictureBox1.Left < 130)
+            {
+                if (iv != 1)
+                {
+                    pictureBox1.Top = pictureBox1.Top - 5;
+                    pictureBox1.Left = pictureBox1.Left + 5;
+                    iv--;
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Top = pictureBox1.Top - 5;
+                
+                
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Top = pictureBox1.Top + 5;
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+
+            if (pictureBox1.Left >= 800)
+            {
+                pictureBox1.Top = 215;
+                pictureBox1.Left = 100;
+                timer1.Stop();
+
+                int koor = rnd.Next(5, 18);
+
+                int doboz = koor * 15;
+
+                pictureBox2.Top = doboz;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
+}
