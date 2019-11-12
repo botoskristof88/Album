@@ -1,0 +1,8 @@
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\obj\Debug\LovoldozosJatek.csprojResolveAssemblyReference.cache
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\obj\Debug\LovoldozosJatek.MainForm.resources
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\obj\Debug\LovoldozosJatek.csproj.GenerateResource.Cache
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\bin\Debug\LovoldozosJatek.exe.config
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\bin\Debug\LovoldozosJatek.exe
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\bin\Debug\LovoldozosJatek.pdb
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\obj\Debug\LovoldozosJatek.exe
+C:\Users\diak\Documents\SharpDevelop Projects\LovoldozosJatek\LovoldozosJatek\obj\Debug\LovoldozosJatek.pdb
