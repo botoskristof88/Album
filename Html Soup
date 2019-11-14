@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<header>
+                        <div class="main">
+			            </div>
+			            <ul>
+				        <li class="active"><a href="#">Főoldal</a></li>
+					    <li><a href="#">Tudnivalók</a></li>	
+					    <li><a href="#">Kapcsolat</a></li>
+			            </ul>
+			            </div>
+<div class="title">
+<h1>Soup Network</h1>
+</div>
+	
+	                  <div class="Button">
+					  <a href="https://discordapp.com/invite/eqkpG2h" class="btn2">Discord</a>
+					  <a href="http://souppvp.buycraft.net/" class="btn">WebShopunk</a>
+					  </div>
+					  
+					   <div class="copyright">
+                       <p>© Minden jog fenntartva @  SoupNetwork 2019</p>	
+                       </div>
+					   
+					 <div class="login-box">
+  <h2>Jelentkezz be!</h2>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Felhasználó név">
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Jelszó">
+  </div>
+
+  <input type="button" class="btn5" value="Belépés">
+</div>
+	  
+</header>		    
+</body>
+</html>
