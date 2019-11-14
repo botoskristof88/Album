@@ -1,0 +1,24 @@
+namespace f25
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			int a, b, o=0;
+			Console.WriteLine("Kérek egy egész számot!");
+			a = Convert.ToInt32(Console.ReadLine());
+			b = a;
+			do {
+				a = a-3;
+				o = o + 1;
+			}
+			while (a > 3);
+				
+			Console.WriteLine(b + " =" + o +"*3+" + a);
+			
+			
+			Console.Write("Befejezéshez nyomjon gombot!");
+			Console.ReadKey(true);
+		}
+	}
+}
