@@ -1,36 +1,72 @@
-//MailMessage message = new MailMessage("spamminger12@gmail.com" , "fricz.personal@gmail.com","DO u want big cock","how many big cock?");
-			
-			SmtpClient client = new SmtpClient();
-			
-			client.Host = "smtp.gmail.com";
-			client.Port =587;
-			client.EnableSsl = true;
-			client.DeliveryMethod = SmtpDeliveryMethod.Network;
-			client.UseDefaultCredentials = false;
-			
-			client.Credentials = new System.Net.NetworkCredential("spamminger123@gmail.com","QAWqaw123");
-			
-			string b =  "Ncore meghívó";
-			string a="!";
-			
-			for (int i = 0; i < 100; i++) {
-				Random rnd=new Random();
-				Thread.Sleep(rnd.Next(1000,2000));
-				client.Send(new MailMessage("spamminger12@gmail.com" , "renato.hegedus12@freemail.hu",b+=a,"Join us for free"));
-				Console.WriteLine("{0}. üzenet elküldve",i+1);
-			}
-			
-			
-			Console.ReadKey();
-		
-						                                      
-		                                      
-			
-			
-			
-			
-			
-			Console.ReadKey(true);
-		}
-	}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Spammer
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.Title = "Programot írta Kristóf@Spammer Béta0.";
+            Console.Write("Írd be az emailt a spammhez: ");
+            string receiver = Console.ReadLine();
+            int acc = 0;
+            List<string> keys = new List<string>();
+            int threads = 5;
+            int ex = 0;
+           
+            while (true)
+            {
+                for (int k = 0; k < threads; k++)
+                {
+                    int threadId = k;
+                    new Thread(() =>
+                    {
+                        if (acc > 2)
+                        {
+                            acc = 0;
+                        }
+
+                        String[] EmailAccs = new string[] { "jelszofeltoro123@gmail.com"};
+                        String[] EmailPass = new string[] {  "Kristof123" };
+                        var fromAddress = new MailAddress(EmailAccs[acc], "daddy");
+                        var toAddress = new MailAddress(receiver, "Skiddy");
+                        string fromPassword = EmailPass[acc];
+                        const string subject = "Gayhub news";
+                        const string body = "Hah ne játsz máskor velem";
+
+                        var smtp = new SmtpClient
+                        {
+                            Host = "smtp.gmail.com",
+                            Port = 587,
+                            EnableSsl = true,
+                            DeliveryMethod = SmtpDeliveryMethod.Network,
+                            UseDefaultCredentials = false,
+                            Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                        };
+                        using (var message = new MailMessage(fromAddress, toAddress)
+                        {
+                            Subject = subject,
+                            Body = body
+                        })
+                        {
+                            smtp.Send(message);
+
+                            Console.WriteLine("Küldj emailt-t az accountoddal[" + EmailAccs[acc] + "]");
+                        }
+
+                        acc++;
+                    }).Start();
+                }
+            }
+
+        }
+    }
 }
