@@ -1,0 +1,15 @@
+Switch 1
+ena
+conf t
+#int vlan 1
+ip address ipcím
+no sh
+exit
+ip defa ip cím | mask
+
+Pc1:
+ena
+conf t
+
+
+
