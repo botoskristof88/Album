@@ -1,0 +1,48 @@
+/*
+ * Created by SharpDevelop.
+ * User: Diak
+ * Date: 2019. 12. 06.
+ * Time: 9:52
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.IO;
+namespace con_beolvasás
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			string [,] eu;
+			eu = new string[28,2];
+			char szeparátor = Convert.ToChar(";");
+			FileStream fajl = new FileStream(@"C:\temp\eu.txt", FileMode.Open);
+			StreamReader olvaso = new StreamReader(fajl);
+			int i = 0;
+			string sor;
+			string [] sp;
+			while (!olvaso.EndOfStream)
+				{
+					sor = olvaso.ReadLine();
+					sp = sor.Split(szeparátor);
+					eu[i,0] = sp[0];
+					eu[i,1] = sp[1];
+					i++;
+			}
+			olvaso.Close();
+			fajl.Close();
+			
+			// TODO: Implement Functionality Here
+			
+			int sorszám =0;
+			for (int j = 0; j <18; j++){
+			string ev= eu[j,1].Substring(0,4);
+			if (Convert.ToInt32(ev)<= Convert.ToInt32((string)"2018"))
+				sorszám++;
+			}
+			Console.Write("3. feledat eu-s tagálamaiszáma=" + sorszám +"db");
+				
+		}
+	}
+}
