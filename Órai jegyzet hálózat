@@ -1,15 +1,26 @@
-Switch 1
-ena
-conf t
-#int vlan 1
-ip address ipcím
-no sh
-exit
-ip defa ip cím | mask
+                                      <------------PORTOK----------->
+                                      
+                                      
+67| DCHP : Dynamic Host Configuration Protocol
+68|
 
-Pc1:
-ena
-conf t
+67: DHCP szerver     UDP alapú
+68: DHCP Kliens                            Szerver:
+                     Kliens: Broadcast            
+                             ----------
+                             felderítés
+                             <--------
+                             Ajánlat
+                             
+                             Egyedi
+                             -------->
+                             Kérés
+                             <-------
+                             Válasz
 
-
-
+69: TFTP: Trivial File Transfer Protocol.
+    UDP Alapú
+   (Konfiguráció,IOS switchek routerek op rendszere,Mentése,frissítése.)
+   
+80: HTTP -Hyper Text  Transfer Prot.
+443: HTTPS - HTTP Secure - SSL Titkosítás.
