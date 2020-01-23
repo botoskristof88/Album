@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<title>Expresso internet-kávézó</title>
+</head>
+<body>
+    <div id="page">
+        <div id="head">
+            <h1>E<span>x</span>presso<br>Konkoru</h1>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="index.html"><span>R</span>ólunk</a></li>
+                <li><a href="szolg.html"><span>S</span>zolgáltatásaink</a></li>
+                <li class="current"><a href="kapcs.html"><span>K</span>apcsolat</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h1>Kapcsolat</h1>
+            <form>
+                <fieldset>
+                    <p class="kep"></p>
+                    <legend>Ha kérdése van, írjon nekünk!</legend>
+                    <div>
+                        <p>Neve:</p>
+                        <div><input type="text" name="text" value=""></div>
+                    </div>
+                    <div>
+                        <p>Email címe:</p>
+                        <div><input type="text" name="email" value=""></div>
+                    </div>
+                    <div>
+                        <p>Kérdése:</p>
+                        <div><input type="text" name="kerdes" value=""></div>
+                    </div>
+                    <div>
+                        <p>Szeretne feliratkozni a hírlevelünkre?</p>
+                        <div>
+                            <input type="radio" name="hirlevel" value="igen" id="hirlevel_igen"> igen<br>
+                            <input type="radio" name="hirlevel" value="nem" id="hirlevel_nem"> nem
+                        </div>
+                    </div>
+                    <div>
+                        <p>&nbsp;</p>
+                        <div><input type="submit" name="mehet" value="Küldés"></div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
