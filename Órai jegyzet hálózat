@@ -24,3 +24,131 @@
    
 80: HTTP -Hyper Text  Transfer Prot.
 443: HTTPS - HTTP Secure - SSL Titkosítás.
+
+Switch>ena
+Switch#conf t
+Switch(config)#int Fa0/1
+Switch(config-if)#switchport nonegotiate 
+Switch(config-if)#switchport mode access
+Switch(config-if)#mcmpswi
+Switch(config-if)#switchport por
+Switch(config-if)#switchport port-security max 1
+Switch(config-if)#switchport port-security max1
+                                              ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#interface FastEthernet0/1
+Switch(config-if)#swit
+Switch(config-if)#switchport port
+Switch(config-if)#switchport port-security ?
+  aging        Port-security aging commands
+  mac-address  Secure mac address
+  maximum      Max secure addresses
+  violation    Security violation mode
+  <cr>
+Switch(config-if)#switchport port-security mac-address ?
+  H.H.H   48 bit mac address
+  sticky  Configure dynamic secure addresses as sticky
+Switch(config-if)#switchport port-security mac-address 0006.2A11.8CA
+Switch(config-if)#swit
+Switch(config-if)#switchport  por
+Switch(config-if)#switchport  port-security  shu
+Switch(config-if)#switchport  port-security  vio
+Switch(config-if)#switchport  port-security  violation shutdown
+Switch(config-if)#
+
+
+Switch(config-if)#switchport  por
+Switch(config-if)#switchport  port-security
+Switch(config-if)#
+%LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+
+Switch(config-if)#
+Switch(config-if)#
+Switch(config-if)#end
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#show por
+Switch#show port-security 
+Secure Port MaxSecureAddr CurrentAddr SecurityViolation Security Action
+               (Count)       (Count)        (Count)
+--------------------------------------------------------------------
+        Fa0/1        1          1                 1         Shutdown
+----------------------------------------------------------------------
+Switch#ena
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int fa0/1
+Switch(config-if)#Shutdown
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+Switch(config-if)#No sh
+
+Switch(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+Switch(config-if)#
+
+
+Switch(config-if)#switchport  por
+Switch(config-if)#switchport  port-security
+Switch(config-if)#
+%LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+
+Switch(config-if)#
+Switch(config-if)#
+Switch(config-if)#end
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#show por
+Switch#show port-security 
+Secure Port MaxSecureAddr CurrentAddr SecurityViolation Security Action
+               (Count)       (Count)        (Count)
+--------------------------------------------------------------------
+        Fa0/1        1          1                 1         Shutdown
+----------------------------------------------------------------------
+Switch#ena
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int fa0/1
+Switch(config-if)#Shutdown
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+Switch(config-if)#No sh
+
+Switch(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+Switch(config-if)#
+Switch(config)#int fa0/1
+Switch(config-if)#
+Switch(config-if)#duplex half
+Switch(config-if)#
