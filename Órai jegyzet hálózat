@@ -146,5 +146,6 @@ ena
 conf t 
 login dock-for 180 attemps 3 vithin 60 <--- felh tiltása ! 180mp-re
 
+Naplózás= loggolás logging
 
 
