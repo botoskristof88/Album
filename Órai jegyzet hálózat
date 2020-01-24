@@ -137,18 +137,14 @@ Switch#ena
 Switch#conf t
 Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#int fa0/1
-Switch(config-if)#Shutdown
 
-%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-Switch(config-if)#No sh
 
-Switch(config-if)#
-%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
 
-%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+Bejelenkezés szabályozás:
+Brute force elleni védelem
+ena 
+conf t 
+login dock-for 180 attemps 3 vithin 60 <--- felh tiltása ! 180mp-re
 
-Switch(config-if)#
-Switch(config)#int fa0/1
-Switch(config-if)#
-Switch(config-if)#duplex half
-Switch(config-if)#
+
+
