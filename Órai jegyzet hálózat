@@ -149,4 +149,16 @@ login dock-for 180 attemps 3 vithin 60 <--- felh tiltása ! 180mp-re
 Naplózás= loggolás logging
 R1(config)# logging on 172.16.1.10
 
+IPv6 128bit elfogytak az ipv4 címek
+0-9, A-F
+2AB9
+2=0010 A=1010 B=1011 9=1001
+--------------------------
+          16 Bit
+	  
+2001:DAB8:ACAD:0003:
+8db   8×16=128
 
+2001:00B8:0003:124A:B8C0:0000:0000:0005
+2001:B8:3:124A:B8C0:0:0:5/64
+2001:B8:3:124A::/64 --> Hálozat azonosító
