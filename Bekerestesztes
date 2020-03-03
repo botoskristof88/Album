@@ -1,0 +1,50 @@
+/*
+ * Created by SharpDevelop.
+ * User: diak
+ * Date: 2020. 03. 03.
+ * Time: 9:06
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+
+namespace afa
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			/*1 tesztkiértékelés 
+	 10 kérés abc válasz
+	 feltöltés
+	 végén kiértékelés
+	 
+	 
+	 válaszok tömb,
+	 jo válaszok tömb,
+	 
+	 nem válaszolás x el jelölés
+	 
+	 */
+	string[] megoldas = new string[11] {"","a","a","a","b","c","c","b","a","c","b"};
+			String[] valaszok = new string[11];
+			int jo_valaszok = 0;
+			
+			for(int i=1; i<11; i++)
+			{
+				Console.WriteLine(i+"kérdés");
+				valaszok[i] = Console.ReadLine();
+				 if (megoldas[i] == valaszok[i])
+				{
+					jo_valaszok++;
+				}
+				 if (v[i])
+			}
+			Console.WriteLine("Jó válaszok száma:"+jo_valaszok);
+			Console.ReadLine();
+			Console.ReadLine();
+		}
+	}
+}
+		
+	
