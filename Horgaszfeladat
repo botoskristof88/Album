@@ -1,0 +1,38 @@
+/*
+ * Created by SharpDevelop.
+ * User: Diak
+ * Date: 2020. 03. 05.
+ * Time: 7:57
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+
+namespace gyak
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Egy fogási napló");
+			Console.WriteLine();
+			string[] horgasz= new string[]{"","Pali","Mari","Peti,","Jani"};
+			
+			
+			int[,] naplo = new int[5,6];
+			Random rnd =new Random();
+			for (int i = 1; i <= 4; i++) {
+				Console.Write(" {0} >x> ",horgasz[i]);
+				for ( int j = 1; j<=5; j++) {
+					
+					
+					naplo[i,j]=rnd.Next(0,9);
+					Console.Write( (naplo[i,j]==0)? "x " :"{0 ",naplo[i,j]);
+				}
+				Console.WriteLine();
+			}
+			Console.ReadLine();
+			
+		}
+	}
+}
