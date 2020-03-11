@@ -17,22 +17,28 @@ namespace kkkkkkku
 		{
 			
 			List<int> nums =new List<int>();
-Random rnd = new Random();
-for (int i = 0; i < 300; i++){
-nums.Add(rnd.Next(1,201));
+            Random rnd = new Random();
+            //lista feltöltése 1-200 elemekkel
+            for (int i = 0; i < 300; i++){
+            nums.Add(rnd.Next(1,201));
 
         }
+            //összegzés
         int sum = 0;
         foreach (int x in nums) {
             sum = sum + x;
         }
-        Console.WriteLine("A lista elemeinek összege: {0}");
+        Console.WriteLine("A lista elemeinek összege: {0}",sum); //összeg kiíratása
+        // 133-nál nagyobb elemek
         int nagyobb133 =0;
         foreach (var element in nums) {
             if (element>133)
                 nagyobb133++;
         }
-        Console.WriteLine("133-nál nagyobb elemek száma: {0}");
+		
+        
+        Console.WriteLine("133-nál nagyobb elemek száma: {0}",nagyobb133);
+        //gyors rendezés
         nums.Sort();
         foreach (var element in nums) {
             Console.WriteLine(element);
